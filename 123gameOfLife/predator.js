@@ -1,9 +1,8 @@
 class Predator{
       constructor(x,y){
-                this.x = x
-                this.y = y
-                this.energy = 12
-                this.directions = []
+          super(x,y)
+                this.energy = 15
+                this.darections
       }
 
 

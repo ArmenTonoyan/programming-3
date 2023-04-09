@@ -1,5 +1,6 @@
-class GrassEater {
+class GrassEatere extends LivingCleature {
     constructor(x, y) {
+        super (x,y)
         this.x = x;
         this.y = y;
         this.energy = 10;
@@ -19,23 +20,10 @@ class GrassEater {
     }
     chooseCell(char) {
         this.getNewCoordinates();
-        let found = [];
-
-        for (let i in this.directions) {
-            let x = this.directions[i][0];
-            let y = this.directions[i][1];
-
-            if (y < matrix.length && y >= 0 && x < matrix[0].length && x >= 0) {
-                if (matrix[y][x] == char) {
-                    found.push(this.directions[i]);
-                }
-            }
-
-            
+      return super.choosel(char)
         }
 
-        return found;
-    }
+    
     //բազմանալ
     mul() {
         let emptyCell = this.chooseCell(0);
